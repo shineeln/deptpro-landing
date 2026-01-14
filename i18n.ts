@@ -14,58 +14,79 @@ export const i18n = {
       demo: 'Демо авах',
     },
     megaMenu: {
-      automation: { title: 'Автоматжуулалт', desc: 'Процессыг 100% автоматжуулна' },
-      analytics: { title: 'Аналитик', desc: 'Бодит хугацааны хяналтын самбар' },
-      security: { title: 'Аюулгүй байдал', desc: 'Банкны түвшний хамгаалалт' }
+      automation: { title: 'Автоматжуулалт', desc: 'Зээлийн авто хуваарилалт (Auto-Allocation)' },
+      analytics: { title: 'Аналитик', desc: 'Зээлийн ангилал, шилжилтийн тайлан' },
+      security: { title: 'Интеграц', desc: 'CallPro болон Polaris системтэй холбогдоно' }
     },
     hero: {
-      tag: 'NPL УДИРДЛАГЫН ИРЭЭДҮЙ',
-      title: 'Зээл төлүүлэлтийг нэг цэгээс удирдах cockpit',
-      subtitle: 'DebtPro бол Банк, ББСБ болон төлүүлэлтийн багуудад зориулсан "Mission-Critical" үйлдлийн систем юм. Төлүүлэлтийн хурдаа 40% хүртэл нэмэгдүүл.',
-      cta: 'Демо авах',
-      secondary: 'Шууд турших',
+      tag: 'NPL УДИРДЛАГЫН ЦОГЦ СИСТЕМ',
+      title: 'Зээл төлүүлэлтийг ухаалгаар удирдах Cockpit',
+      subtitle: 'DebtPro бол Банк, ББСБ-ын зээлийн чанарыг сайжруулах "Mission-Critical" үйлдлийн систем юм. Polaris-аас дата импорт хийж, CallPro-оор автоматжуул.',
+      cta: 'Демо захиалах',
+      secondary: 'Шууд үзэх',
       carousel: {
-        dashboard: 'Ерөнхий хяналт',
-        profile: 'Зээлдэгч 360°',
-        legal: 'Шүүх / Шийдвэр',
-        sms: 'SMS Омни-суваг',
+        dashboard: 'Гүйцэтгэлийн самбар',
+        profile: 'Харилцагчийн 360°',
+        legal: 'Хууль, Шүүхийн процесс',
+        sms: 'CallPro Интеграц',
         performance: 'Ажилтны KPI'
+      }
+    },
+    workflow: {
+      tag: 'COLLECTION PIPELINE',
+      title: 'Төлүүлэлтийн нэгдсэн процесс',
+      subtitle: 'Дуудлагаас эхлээд Шүүхийн шийдвэр гүйцэтгэх хүртэлх бүх шат дамжлагыг нэг дороос удирдах систем.',
+      stages: {
+        call: 'Дуудлага',
+        sms: 'МСЖ',
+        visit: 'Уулзалт',
+        legal: 'Хууль',
+        court: 'Шүүх',
+        bailiff: 'ШШГ',
+        recovery: 'Төлөлт'
+      },
+      status: {
+        success: 'Амжилттай',
+        pending: 'Хүлээгдэж буй',
+        failed: 'Амжилтгүй',
+        promised: 'Амлалт авсан'
       }
     },
     excelSection: {
       tag: 'LEGACY VS MODERN',
-      title: 'Спредшитээс салж, Сүүлийн үеийн OS-д шилж.',
-      subtitle: 'Зээлийн төлүүлэлт бол секундээр хэмжигдэх өгөгдлийн урсгал. Эксель бол хурд сааруулагч, харин DebtPro бол хурдасгуур юм.',
+      title: 'Эксель файл бол "Хар хайрцаг". DebtPro бол Ил тод байдал.',
+      subtitle: 'Зээл төлүүлэлт бол секундээр хэмжигдэх өгөгдлийн урсгал. Эксель бол хурд сааруулагч, харин DebtPro бол хурдасгуур юм.',
       excel: {
         title: 'Уламжлалт арга (Excel)',
-        description: 'Төлүүлэлтийн багийг "Хар хайрцаг" дотор ажиллуулж, дата алдагдах эрсдэлийг үүсгэдэг.',
+        description: 'Төлүүлэлтийн багийг хяналтгүй ажиллуулж, дата алдагдах эрсдэлийг үүсгэдэг.',
         items: [
-          'Дата алдагдах, хуулбарлагдах өндөр эрсдэл',
+          'Polaris-аас датаг гараар зөөж алдаа гаргах',
+          'Зээлийн ангиллыг гараар тооцоолох (5-100%)',
           'Агент бүрийн гүйцэтгэлийг хянах боломжгүй',
-          'Процесс автоматжуулалт тэг (Manual process)',
-          'Шүүхийн шатны дата холболтгүй'
+          'Барьцаа хөрөнгийн мэдээлэл салангид'
         ]
       },
       debtpro: {
         title: 'DebtPro Intelligence OS',
         description: 'Бүх датаг нэгдсэн системд төвлөрүүлж, AI-д суурилсан оновчлол хийнэ.',
         items: [
-          '100% Үүлэн технологи, AES-256 хамгаалалт',
-          'Бодит цагийн аналитик ба KPI самбар',
-          'Auto-dialer болон SMS автоматжуулалт',
-          'Хууль, шүүхийн иж бүрэн процесс'
+          'Auto-Allocation: Зээлийг тэнцүү хуваарилах',
+          'Эрсдэлийн сангийн автомат тооцоолол',
+          'CallPro: Системээс шууд залгах, МСЖ илгээх',
+          'Барьцаа хөрөнгө, Хамаарал бүхий 360° мэдээлэл'
         ]
       },
       table: {
-        features: ['Өгөгдлийн хамгаалалт', 'Автомат хуваарилалт', 'Бодит цагийн хяналт', 'AI оноожуулалт', 'Хуулийн модуль'],
+        features: ['Өгөгдлийн хамгаалалт', 'Автомат хуваарилалт', 'CallPro Интеграц', 'Шүүхийн процесс', 'Баримт бичиг үүсгэх'],
         excelValues: ['Байхгүй', 'Гар ажиллагаа', 'Байхгүй', 'Байхгүй', 'Байхгүй'],
-        debtproValues: ['Банкны түвшин', 'Автомат', 'Бодит цаг', 'Байгаа', 'Байгаа']
+        debtproValues: ['AES-256', 'Автомат', 'Байгаа', 'Байгаа', 'Байгаа']
       }
     },
     showcase: {
-      allocation: { title: 'Ухаалаг хуваарилалт', benefit: 'Зээлийн багцыг ажилтнуудад автоматаар оновчтой хуваарилна.', impact: '25% ӨСӨЛТ' },
-      routing: { title: 'Динамик чиглүүлэлт', benefit: 'Харилцагч бүрт тохирсон харилцааны сувгийг AI ашиглан сонгоно.', impact: 'AI DRIVEN' },
-      lockin: { title: 'Дата түгжих', benefit: 'Байгууллагын ноу-хау болон датаг аюулгүй хадгална.', impact: '100% SECURE' }
+      allocation: { title: 'Ухаалаг хуваарилалт', benefit: 'Зээлийн багцыг ажилтнуудад дүн болон тоогоор оновчтой хуваарилна.', impact: 'AUTO-DISTRIBUTION' },
+      sms: { title: 'МСЖ Автоматжуулалт', benefit: 'Масс болон автомат МСЖ илгээж, хүргэлтийн тайланг бодит хугацаанд хянана.', impact: '99.9% DELIVERY' },
+      routing: { title: 'CallPro Интеграц', benefit: 'Системээс шууд залгаж, ярианы түүхийг харилцагчийн картад бүртгэнэ.', impact: 'ONE-CLICK CALL' },
+      lockin: { title: 'Баримт бичиг', benefit: 'Нэхэмжлэх, мэдэгдэх хуудсыг системээс бэлэн загвараар хэвлэнэ.', impact: 'DOC AUTOMATION' }
     },
     contactSection: {
       title: 'Хамтран ажиллах хүсэлт илгээх',
@@ -79,27 +100,27 @@ export const i18n = {
       success: 'Таны хүсэлтийг хүлээн авлаа. Бид тун удахгүй холбогдох болно.',
       placeholders: {
         name: 'Овог нэр',
-        org: 'Байгууллагын нэр',
+        org: 'Банк, ББСБ-ын нэр',
         phone: '9911....',
         email: 'name@company.mn',
         message: 'Танд тулгарч буй асуудал эсвэл хэрэгцээгээ бичнэ үү...'
       }
     },
     stats: {
-      npl: 'Нийт ХХ',
-      today: 'Өнөөдөр төлөгдсөн',
-      rate: 'Амжилтын хувь',
-      risk: 'Эрсдэлийн төвшин'
+      npl: 'Нийт зээл',
+      today: 'Төлүүлсэн',
+      rate: 'Ангилал сайжралт',
+      risk: 'Эрсдэлийн сан'
     },
     faq: {
       title: 'Түгээмэл асуултууд',
       items: [
-        { q: 'Систем хэрхэн ажилладаг вэ?', a: 'DebtPro нь таны зээлийн багцыг автоматаар шинжилж, хамгийн тохиромжтой төлүүлэлтийн сувгийг (Call, SMS, Field, Legal) сонгодог.' },
-        { q: 'Аюулгүй байдал хэр найдвартай вэ?', a: 'Бид банкны түвшний AES-256 шифрлэлт болон ISO 27001 стандартын дагуу дата аюулгүй байдлыг хангадаг.' }
+        { q: 'Polaris системтэй хэрхэн холбогддог вэ?', a: 'DebtPro нь Polaris-аас экспортолсон эксель файлыг шууд уншиж, зээлийн ангилал болон хугацаа хэтрэлтийг автоматаар боддог.' },
+        { q: 'CallPro интеграц ямар давуу талтай вэ?', a: 'Ажилтнууд системээс шууд залгах боломжтой бөгөөд ярианы бичлэг, түүх нь харилцагчийн "Action Tracking" хэсэгт автоматаар бүртгэгддэг.' }
       ]
     },
     finalCta: {
-      title: 'Эрсдэлээ орлого болго.',
+      title: 'Эрсдэлээ Орлого болго.',
       subtitle: 'Зээлийн багцаа эрүүлжүүлж, капиталын эргэлтээ сайжруул. Бид танд тусална.',
       cta: 'Демо захиалах'
     }
@@ -116,93 +137,114 @@ export const i18n = {
       demo: 'Book a Demo',
     },
     megaMenu: {
-      automation: { title: 'Automation', desc: '100% automated workflows' },
-      analytics: { title: 'Analytics', desc: 'Real-time monitoring dashboards' },
-      security: { title: 'Security', desc: 'Bank-grade data protection' }
+      automation: { title: 'Automation', desc: 'Auto-Allocation by balance or count' },
+      analytics: { title: 'Analytics', desc: 'Migration analysis and quality reports' },
+      security: { title: 'Integrations', desc: 'CallPro and Polaris connectivity' }
     },
     hero: {
-      tag: 'THE FUTURE OF NPL MANAGEMENT',
-      title: 'The command cockpit for your recovery operation.',
-      subtitle: 'DebtPro is the mission-critical operating system for Banks and NBFIs. Increase recovery efficiency by up to 40% using AI-driven logic.',
-      cta: 'Request Demo',
+      tag: 'NPL MANAGEMENT OS',
+      title: 'Smart Command Cockpit for Loan Recovery',
+      subtitle: 'The mission-critical operating system for Banks and NBFIs. Import data from Polaris and automate recovery with CallPro.',
+      cta: 'Book a Demo',
       secondary: 'Live Preview',
       carousel: {
         dashboard: 'Command Center',
-        profile: 'Borrower 360°',
-        legal: 'Legal Pipeline',
-        sms: 'Omni-channel SMS',
-        performance: 'Performance KPI'
+        profile: '360° Borrower View',
+        legal: 'Legal Process',
+        sms: 'CallPro Integration',
+        performance: 'Agent Performance'
+      }
+    },
+    workflow: {
+      tag: 'COLLECTION PIPELINE',
+      title: 'End-to-End Collection Workflow',
+      subtitle: 'From initial call to court enforcement—manage every phase of recovery within a single intelligent pipeline.',
+      stages: {
+        call: 'Call',
+        sms: 'SMS',
+        visit: 'Visit',
+        legal: 'Legal',
+        court: 'Court',
+        bailiff: 'Bailiff',
+        recovery: 'Recovery'
+      },
+      status: {
+        success: 'Successful',
+        pending: 'Pending',
+        failed: 'Failed',
+        promised: 'Promised'
       }
     },
     excelSection: {
       tag: 'LEGACY VS MODERN',
-      title: 'Stop using tools from 1985 for modern debt.',
-      subtitle: 'Loan recovery is high-velocity data management. Excel is a bottleneck. DebtPro is the engine of operational efficiency.',
+      title: 'Excel is a "Black Box". DebtPro is Transparency.',
+      subtitle: 'Loan recovery is data flow measured in seconds. Excel is a bottleneck. DebtPro is the engine.',
       excel: {
-        title: 'Legacy Chaos (Excel)',
-        description: 'Fragmented files lead to data leakage and operational blindness.',
+        title: 'Legacy (Excel)',
+        description: 'Unmonitored recovery teams leading to high data risk.',
         items: [
-          'Critical risk of data theft and duplication',
-          'Zero visibility into real-time agent activity',
-          'Completely manual, error-prone workflows',
-          'No integration with legal or phone systems'
+          'Manual data entry from core banking systems',
+          'Manual risk fund calculation (5-100%)',
+          'Zero visibility into agent activity',
+          'Fragmented collateral information'
         ]
       },
       debtpro: {
         title: 'DebtPro Intelligence OS',
-        description: 'Centralized, audit-ready, and optimized by predictive algorithms.',
+        description: 'Centralized intelligence optimized by predictive logic.',
         items: [
-          'Bank-grade cloud security with full audit logs',
-          'Live KPI dashboards for every management level',
-          'Automated call routing and multi-channel SMS',
-          'End-to-end legal and field module integration'
+          'Auto-Allocation: Fair portfolio distribution',
+          'Automatic Risk Fund & Category Calculation',
+          'CallPro: Direct dialing & SMS automation',
+          '360° Collateral & Family linkage view'
         ]
       },
       table: {
-        features: ['Data Security', 'Auto Assignment', 'Live Monitoring', 'AI Scoring', 'Legal Module'],
+        features: ['Data Security', 'Auto Allocation', 'CallPro Integration', 'Legal Tracking', 'Doc Generation'],
         excelValues: ['None', 'Manual', 'None', 'None', 'None'],
-        debtproValues: ['AES-256', 'Automated', 'Real-time', 'Included', 'Included']
+        debtproValues: ['AES-256', 'Automated', 'Included', 'Included', 'Included']
       }
     },
     showcase: {
-      allocation: { title: 'Smart Allocation', benefit: 'Automatically distribute portfolios to agents based on performance.', impact: '25% GROWTH' },
-      routing: { title: 'Dynamic Routing', benefit: 'Use AI to select the best communication channel for each debtor.', impact: 'AI DRIVEN' },
-      lockin: { title: 'Data Lock-in', benefit: 'Secure your institutional knowledge and sensitive recovery data.', impact: '100% SECURE' }
+      allocation: { title: 'Smart Allocation', benefit: 'Distribute portfolios to agents automatically based on balance or count.', impact: 'AUTO-DISTRIBUTION' },
+      sms: { title: 'SMS Automation', benefit: 'Trigger mass or automated SMS reminders and track delivery reports in real-time.', impact: '99.9% DELIVERY' },
+      routing: { title: 'CallPro Integration', benefit: 'Call directly from the system and auto-log results into action tracking.', impact: 'ONE-CLICK CALL' },
+      lockin: { title: 'Doc Automation', benefit: 'Generate legal notices and payment requests from templates instantly.', impact: 'DOC AUTOMATION' }
     },
     contactSection: {
-      title: 'Get Started',
-      subtitle: 'Ready to modernize your loan recovery cycle? Fill out the form and our experts will reach out to you.',
+      title: 'Modernize Your Recovery',
+      subtitle: 'Ready to turn bad debt into recovered revenue? Fill out the form below.',
       name: 'Your Name',
       org: 'Organization Name',
       phone: 'Phone Number',
       email: 'Email Address',
       message: 'Message',
-      submit: 'Submit Request',
-      success: 'Thank you! Your request has been received. We will contact you shortly.',
+      submit: 'Request Access',
+      success: 'Thank you! We will reach out to schedule your demo.',
       placeholders: {
         name: 'Full Name',
         org: 'Bank or NBFI Name',
-        phone: '+976 ....',
+        phone: 'Phone Number',
         email: 'name@company.com',
-        message: 'Tell us about your recovery challenges...'
+        message: 'Tell us about your recovery needs...'
       }
     },
     stats: {
-      npl: 'Total NPL',
-      today: 'Collected Today',
-      rate: 'Success Rate',
-      risk: 'Risk Level'
+      npl: 'Total Portfolio',
+      today: 'Collected',
+      rate: 'Migration Rate',
+      risk: 'Risk Fund'
     },
     faq: {
       title: 'Frequently Asked Questions',
       items: [
-        { q: 'How does the system work?', a: 'DebtPro analyzes your portfolio and dynamically assigns cases to the best recovery channel (Call, SMS, Field, Legal) using AI scoring.' },
-        { q: 'How secure is the data?', a: 'We employ bank-grade AES-256 encryption and follow strict ISO 27001 standards for total data protection.' }
+        { q: 'How does Polaris integration work?', a: 'Simply upload the exported loan report; DebtPro parses categories, overdue days, and risk funds automatically.' },
+        { q: 'What are the benefits of CallPro integration?', a: 'Agents click to call from the UI. Every recording and duration is linked to the borrower profile for audit.' }
       ]
     },
     finalCta: {
-      title: 'Turn Risk into Recovered Revenue.',
-      subtitle: 'Stop letting bad debt drain your capital. Deploy DebtPro and start managing recovery with surgical precision.',
+      title: 'Turn Risk into Revenue.',
+      subtitle: 'Stop managing debt in spreadsheets. Deploy DebtPro and recover capital with surgical precision.',
       cta: 'Book a Demo'
     }
   }
