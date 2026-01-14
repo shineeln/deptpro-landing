@@ -24,6 +24,7 @@
               'glow': 'glow 2s ease-in-out infinite alternate',
               'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
               'reveal': 'reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
+              'spin-slow': 'spin 8s linear infinite',
             },
             keyframes: {
               float: {
@@ -52,7 +53,7 @@
         --bloom-color: rgba(59, 130, 246, 0.15);
       }
       body {
-        transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-x: hidden;
       }
       .dark {
@@ -63,25 +64,25 @@
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .dark .glass-panel {
-        background: rgba(15, 23, 42, 0.7);
+        background: rgba(15, 23, 42, 0.75);
         border: 1px solid rgba(255, 255, 255, 0.08);
       }
       .light .glass-panel {
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.85);
         border: 1px solid rgba(0, 0, 0, 0.05);
       }
       .grid-bg {
         background-image: linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
                           linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
-        background-size: 40px 40px;
-        mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+        background-size: 50px 50px;
+        mask-image: radial-gradient(ellipse at center, black, transparent 85%);
       }
       .gradient-text {
         background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 200% auto;
-        animation: shine 5s linear infinite;
+        animation: shine 8s linear infinite;
       }
       @keyframes shine {
         to { background-position: 200% center; }
@@ -91,34 +92,40 @@
       
       .bloom {
         position: absolute;
-        width: 600px;
-        height: 600px;
+        width: 800px;
+        height: 800px;
         background: var(--bloom-color);
-        filter: blur(120px);
+        filter: blur(150px);
         border-radius: 50%;
         pointer-events: none;
         z-index: -1;
       }
       
       .dashboard-card {
-        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
-      }
-      .dashboard-card:hover {
-        transform: translateY(-8px) scale(1.01);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease, border-color 0.6s ease;
       }
       .dark .dashboard-card {
-        background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
       }
       .light .dashboard-card {
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.04);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
       }
       
       .terminal-text {
         font-family: 'JetBrains Mono', monospace;
+      }
+
+      .feature-slide {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+      }
+
+      .scroll-container {
+        scroll-snap-type: x mandatory;
       }
     </style>
     <script type="importmap">
@@ -133,7 +140,7 @@
     }
     </script>
   </head>
-  <body class="dark bg-slate-950 text-slate-200">
+  <body class="dark bg-slate-950 text-slate-200 antialiased selection:bg-blue-500 selection:text-white">
     <div id="root"></div>
   </body>
 </html>
