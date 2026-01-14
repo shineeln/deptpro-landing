@@ -87,26 +87,25 @@ export const FAQItem: React.FC<{ q: string; a: string; theme: string }> = ({ q, 
 
 export const ExcelChaosAnimation: React.FC = () => (
   <div className="relative w-full h-32 flex items-center justify-center overflow-hidden">
-     <div className="absolute animate-float [animation-duration:3s] top-2 left-1/4 opacity-40"><FileSpreadsheet size={20} className="text-red-400"/></div>
-     <div className="absolute animate-float [animation-duration:5s] bottom-2 right-1/4 opacity-40"><AlertCircle size={18} className="text-amber-500"/></div>
-     <div className="absolute animate-float [animation-duration:4s] top-1/2 right-1/3 opacity-40"><XCircle size={16} className="text-red-500"/></div>
-     <svg width="200" height="100" viewBox="0 0 200 100" fill="none" className="opacity-20">
-        <path d="M10 50 Q 50 10 100 50 T 190 50" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" className="animate-pulse" />
-        <path d="M10 30 Q 80 80 190 20" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
-        <path d="M30 90 Q 100 20 170 90" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+     <div className="absolute animate-float [animation-duration:3s] top-2 left-1/4 opacity-40 dark:opacity-30"><FileSpreadsheet size={20} className="text-red-600 dark:text-red-500"/></div>
+     <div className="absolute animate-float [animation-duration:5s] bottom-2 right-1/4 opacity-40 dark:opacity-30"><AlertCircle size={18} className="text-amber-600"/></div>
+     <div className="absolute animate-float [animation-duration:4s] top-1/2 right-1/3 opacity-40 dark:opacity-30"><XCircle size={16} className="text-red-600 dark:text-red-500"/></div>
+     <svg width="200" height="100" viewBox="0 0 200 100" fill="none" className="opacity-10">
+        <path d="M10 50 Q 50 10 100 50 T 190 50" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" className="text-red-600" />
+        <path d="M10 30 Q 80 80 190 20" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" className="text-slate-400" />
      </svg>
-     <div className="z-10 bg-slate-100 dark:bg-slate-800 p-4 rounded-xl border border-red-500/20 shadow-xl">
-        <FileSpreadsheet size={40} className="text-red-500 animate-pulse"/>
+     <div className="z-10 bg-white dark:bg-slate-800 p-4 rounded-xl border border-red-600/30 dark:border-red-500/30 shadow-xl shadow-red-600/10">
+        <FileSpreadsheet size={40} className="text-red-600 dark:text-red-500 animate-pulse"/>
      </div>
   </div>
 );
 
 export const DebtProOrderAnimation: React.FC = () => (
   <div className="relative w-full h-32 flex items-center justify-center overflow-hidden">
-     <div className="absolute inset-0 flex items-center justify-center opacity-10">
-        <div className="w-full h-[1px] bg-blue-500 animate-[reveal_2s_infinite]"></div>
+     <div className="absolute inset-0 flex items-center justify-center opacity-5">
+        <div className="w-full h-px bg-blue-500 animate-pulse"></div>
      </div>
-     <div className="absolute animate-spin-slow opacity-20"><RefreshCw size={120} className="text-blue-400"/></div>
+     <div className="absolute animate-spin-slow opacity-10"><RefreshCw size={120} className="text-blue-500"/></div>
      <div className="z-10 bg-blue-600 p-4 rounded-xl shadow-[0_0_30px_rgba(37,99,235,0.4)] animate-float">
         <DatabaseZap size={40} className="text-white"/>
      </div>

@@ -46,32 +46,46 @@ const App: React.FC = () => {
       />
 
       <main>
-        <Hero 
-          lang={lang} 
-          theme={theme} 
-          activeSlide={activeSlide} 
-          setActiveSlide={setActiveSlide} 
-        />
+        <div id="home">
+          <Hero 
+            lang={lang} 
+            theme={theme} 
+            activeSlide={activeSlide} 
+            setActiveSlide={setActiveSlide} 
+          />
+        </div>
 
         <ComparisonSection lang={lang} theme={theme} />
 
-        <WhyDebtProSection lang={lang} theme={theme} />
+        <div id="why">
+          <WhyDebtProSection lang={lang} theme={theme} />
+        </div>
 
-        <WorkflowSection lang={lang} theme={theme} />
+        <div id="solutions">
+          <WorkflowSection lang={lang} theme={theme} />
+        </div>
 
-        <InteractiveFlowSection lang={lang} theme={theme} />
+        <div id="product">
+          <InteractiveFlowSection lang={lang} theme={theme} />
+        </div>
 
-        <ShowcaseSection lang={lang} theme={theme} />
+        <div id="customers">
+          <ShowcaseSection lang={lang} theme={theme} />
+        </div>
 
-        <ContactSection 
-          lang={lang} 
-          theme={theme} 
-          submitted={submitted} 
-          isSubmitting={isSubmitting} 
-          handleFormSubmit={handleFormSubmit} 
-        />
+        <div id="contact">
+          <ContactSection 
+            lang={lang} 
+            theme={theme} 
+            submitted={submitted} 
+            isSubmitting={isSubmitting} 
+            handleFormSubmit={handleFormSubmit} 
+          />
+        </div>
 
-        <FAQSection lang={lang} theme={theme} />
+        <div id="faq">
+          <FAQSection lang={lang} theme={theme} />
+        </div>
       </main>
 
       <Footer lang={lang} theme={theme} />

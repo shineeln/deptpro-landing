@@ -124,11 +124,11 @@ export const i18n = {
     },
     excelSection: {
       tag: 'LEGACY VS MODERN',
-      title: 'Эксель файл бол "Хар хайрцаг". DebtPro бол Ил тод байдал.',
-      subtitle: 'Зээл төлүүлэлт бол секундээр хэмжигдэх өгөгдлийн урсгал. Эксель бол хурд сааруулагч, харин DebtPro бол хурдасгуур юм.',
+      title: 'Эксель бол хяналтгүй "хар хайрцаг". DebtPro бол иж бүрэн ил тод систем.',
+      subtitle: 'Зээл төлүүлэлт бол секундээр хэмжигдэх өгөгдлийн урсгал. Эксель бол мэдээллийн мухардал, харин DebtPro бол хурдасгуур юм.',
       excel: {
         title: 'Уламжлалт арга (Excel)',
-        description: 'Төлүүлэлтийн багийг хяналтгүй ажиллуулж, дата алдагдах эрсдэлийг үүсгэдэг.',
+        description: 'Төлүүлэлтийн багийг хяналтгүй ажиллуулж, дата алдагдах болон "мэдээллийн нүх" үүсгэх эрсдэлтэй.',
         items: [
           'Polaris-аас датаг гараар зөөж алдаа гаргах',
           'Зээлийн ангиллыг гараар тооцоолох (5-100%)',
@@ -138,7 +138,7 @@ export const i18n = {
       },
       debtpro: {
         title: 'DebtPro Intelligence OS',
-        description: 'Бүх датаг нэгдсэн системд төвлөрүүлж, AI-д суурилсан оновчлол хийнэ.',
+        description: 'Бүх датаг нэгдсэн системд төвлөрүүлж, бодит хяналт ба ил тод байдлыг бий болгоно.',
         items: [
           'Auto-Allocation: Зээлийг тэнцүү хуваарилах',
           'Эрсдэлийн сангийн автомат тооцоолол',
@@ -185,7 +185,7 @@ export const i18n = {
     faq: {
       title: 'Түгээмэл асуултууд',
       items: [
-        { q: 'Polaris системтэй хэрхэн холбогддог вэ?', a: 'DebtPro нь Polaris-аас экспортолсон эксель файлыг шууд уншиж, зээлийн ангилал болон хугацаа хэтрэлтийг автоматаар боддог.' },
+        { q: 'Polaris системтэй хэрхэн холбогддог vэ?', a: 'DebtPro нь Polaris-аас экспортолсон эксель файлыг шууд уншиж, зээлийн ангилал болон хугацаа хэтрэлтийг автоматаар боддог.' },
         { q: 'CallPro интеграц ямар давуу талтай вэ?', a: 'Ажилтнууд системээс шууд залгах боломжтой бөгөөд ярианы бичлэг, түүх нь харилцагчийн "Action Tracking" хэсэгт автоматаар бүртгэгддэг.' }
       ]
     },
@@ -317,11 +317,11 @@ export const i18n = {
     },
     excelSection: {
       tag: 'LEGACY VS MODERN',
-      title: 'Excel is a "Black Box". DebtPro is Transparency.',
+      title: 'Excel is an uncontrolled "black box". DebtPro is a transparent system.',
       subtitle: 'Loan recovery is data flow measured in seconds. Excel is a bottleneck. DebtPro is the engine.',
       excel: {
         title: 'Legacy (Excel)',
-        description: 'Unmonitored recovery teams leading to high data risk.',
+        description: 'Unmonitored recovery teams leading to high data risk and information silos.',
         items: [
           'Manual data entry from core banking systems',
           'Manual risk fund calculation (5-100%)',

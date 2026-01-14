@@ -35,7 +35,7 @@ export const WhyDebtProSection: React.FC<WhyDebtProSectionProps> = ({ lang, them
           <Reveal direction="right">
             <div className={`h-full p-10 rounded-[3rem] border flex flex-col ${isDark ? 'bg-slate-900/30 border-slate-800' : 'bg-white border-slate-200 shadow-xl'}`}>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-500">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${isDark ? 'bg-red-500/10 text-red-500' : 'bg-red-50 text-red-600'}`}>
                   <AlertTriangle size={32} />
                 </div>
                 <h3 className={`text-2xl font-black ${isDark ? 'text-white' : 'text-slate-900'}`}>
