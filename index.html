@@ -24,19 +24,19 @@
               'glow': 'glow 2s ease-in-out infinite alternate',
               'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
               'reveal': 'reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
-              'spin-slow': 'spin 8s linear infinite',
+              'spin-slow': 'spin 12s linear infinite',
             },
             keyframes: {
               float: {
                 '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
+                '50%': { transform: 'translateY(-15px)' },
               },
               glow: {
-                'from': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.2), 0 0 10px rgba(59, 130, 246, 0.2)' },
-                'to': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4)' },
+                'from': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.1)' },
+                'to': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)' },
               },
               slideUp: {
-                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
                 '100%': { transform: 'translateY(0)', opacity: '1' },
               },
               reveal: {
@@ -50,39 +50,44 @@
     </script>
     <style>
       :root {
-        --bloom-color: rgba(59, 130, 246, 0.15);
+        --bloom-color: rgba(59, 130, 246, 0.08);
       }
       body {
-        transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-x: hidden;
       }
       .dark {
-        --bloom-color: rgba(37, 99, 235, 0.2);
+        --bloom-color: rgba(37, 99, 235, 0.15);
+        background-color: #020617; /* Slate 950 */
+      }
+      .light {
+        background-color: #F8FAFC; /* Slate 50 */
       }
       .glass-panel {
-        backdrop-filter: blur(20px) saturate(180%);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(16px) saturate(180%);
+        transition: all 0.4s ease;
       }
       .dark .glass-panel {
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.06);
       }
       .light .glass-panel {
         background: rgba(255, 255, 255, 0.85);
         border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
       }
       .grid-bg {
-        background-image: linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-                          linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
-        background-size: 50px 50px;
-        mask-image: radial-gradient(ellipse at center, black, transparent 85%);
+        background-image: linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse at center, black, transparent 90%);
       }
       .gradient-text {
-        background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #d946ef 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 200% auto;
-        animation: shine 8s linear infinite;
+        animation: shine 6s linear infinite;
       }
       @keyframes shine {
         to { background-position: 200% center; }
@@ -92,41 +97,48 @@
       
       .bloom {
         position: absolute;
-        width: 800px;
-        height: 800px;
+        width: 1000px;
+        height: 1000px;
         background: var(--bloom-color);
-        filter: blur(150px);
+        filter: blur(180px);
         border-radius: 50%;
         pointer-events: none;
         z-index: -1;
       }
       
       .dashboard-card {
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease, border-color 0.6s ease;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.5s ease;
       }
       .dark .dashboard-card {
-        background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%);
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
       }
       .light .dashboard-card {
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
       }
       
       .terminal-text {
         font-family: 'JetBrains Mono', monospace;
       }
 
-      .feature-slide {
+      .scroll-snap-x {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .snap-item {
         scroll-snap-align: center;
-        flex-shrink: 0;
       }
 
-      .scroll-container {
-        scroll-snap-type: x mandatory;
-      }
+      /* Refined Light Mode UI tweaks */
+      .light .text-slate-500 { color: #64748B; }
+      .light .text-slate-400 { color: #94A3B8; }
+      .light .border-slate-800 { border-color: #E2E8F0; }
+      .light .bg-slate-900 { background-color: #F1F5F9; }
+      .light .bg-slate-950 { background-color: #F8FAFC; }
+
     </style>
     <script type="importmap">
     {
