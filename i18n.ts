@@ -32,6 +32,76 @@ export const i18n = {
         performance: 'Ажилтны KPI'
       }
     },
+    whyDebtPro: {
+      tag: 'БҮТЭЭГДЭХҮҮНИЙ ДАВУУ ТАЛ',
+      title: 'Яагаад DebtPro гэж?',
+      subtitle: 'Ерөнхий зориулалтын CRM системүүд борлуулалтад төвлөрдөг. DebtPro бол өр төлүүлэлтийн онцлогт зориулсан тусгай OS юм.',
+      legacy: {
+        title: 'Ерөнхий CRM системүүд',
+        items: [
+          'Зөвхөн борлуулалтад зориулагдсан бүтэц',
+          'Монгол улсын зээлийн ангиллын ложик байхгүй',
+          'CallPro, Polaris-тай холбогдоход хүндрэлтэй',
+          'Нэмэлт хөгжүүлэлтийн зардал маш өндөр'
+        ]
+      },
+      advantage: {
+        title: 'DebtPro Intelligence OS',
+        items: [
+          'Төлүүлэлтийн процесст суурилсан UI/UX',
+          'Polaris датаг шууд унших алгоритм',
+          'Шүүхийн процессын иж бүрэн хяналт',
+          'Баримт бичиг автоматаар үүсгэх загварууд'
+        ]
+      },
+      benefits: [
+        { title: 'Локал Интеграц', desc: 'CallPro болон дотоодын банкны системүүдтэй шууд холбогдоно.' },
+        { title: 'Хуулийн нийцэл', desc: 'Монгол улсын банк санхүүгийн хууль тогтоомжид бүрэн нийцсэн.' },
+        { title: 'AI Оновчлол', desc: 'Зээлдэгчийн зан төлөвт суурилсан төлүүлэлтийн дараалал.' }
+      ]
+    },
+    flow: {
+      tag: 'SYSTEM FLOW',
+      title: 'Өгөгдлөөс Үр дүн хүртэл',
+      subtitle: 'Зээл төлүүлэлтийн бүх процессыг DebtPro хэрхэн автоматжуулдаг вэ?',
+      steps: [
+        {
+          id: 0,
+          label: 'Data Centralization',
+          path: 'Dashboard -> Import Data',
+          title: 'Мэдээлэл төвлөрүүлэх',
+          desc: 'Polaris болон бусад системээс датаг эксель файлаар оруулна. Систем ангиллыг (Хэвийн, Анхаарал хандуулах г.м) автоматаар тогтооно.'
+        },
+        {
+          id: 1,
+          label: 'Smart Distribution',
+          path: 'Loan Management -> Auto-Allocation',
+          title: 'Ухаалаг хуваарилалт',
+          desc: 'Зээлүүдийг ажилтнуудын ачаалал, зээлийн дүн зэргийг харгалзан "AI Logic"-оор автоматаар хуваарилна.'
+        },
+        {
+          id: 2,
+          label: 'Multi-Channel Action',
+          path: 'Collection Workspace -> Action Tracking',
+          title: 'Харилцах сувгууд',
+          desc: 'CallPro ашиглан системээс шууд залгах, МСЖ илгээх. Бүх үйлдэл цаг хугацааны дарааллаар (Timeline) хадгалагдана.'
+        },
+        {
+          id: 3,
+          label: 'Legal Automation',
+          path: 'Legal Case -> Document Generator',
+          title: 'Бичиг баримт автоматжуулалт',
+          desc: 'Мэдэгдэх хуудас, Шүүхийн нэхэмжлэлийг бэлэн загварын дагуу автоматаар бөглөж, хэвлэхэд бэлэн болгоно.'
+        },
+        {
+          id: 4,
+          label: 'Insights & Reporting',
+          path: 'Reports -> Performance Dashboard',
+          title: 'Тайлан, дүн шинжилгээ',
+          desc: 'Төлүүлсэн дүн, ажилтнуудын гүйцэтгэл, эрсдэлийн санг бодит цаг хугацааны графикуудаар харна.'
+        }
+      ]
+    },
     workflow: {
       tag: 'COLLECTION PIPELINE',
       title: 'Төлүүлэлтийн нэгдсэн процесс',
@@ -154,6 +224,76 @@ export const i18n = {
         sms: 'CallPro Integration',
         performance: 'Agent Performance'
       }
+    },
+    whyDebtPro: {
+      tag: 'CORE ADVANTAGES',
+      title: 'Why DebtPro?',
+      subtitle: 'Traditional CRM systems are built for sales. DebtPro is a specialized Operating System for loan recovery and NPL management.',
+      legacy: {
+        title: 'Generic CRMs',
+        items: [
+          'Built for sales pipelines, not recovery',
+          'No native Mongolian financial logic',
+          'Extremely complex to integrate locally',
+          'High customization & overhead costs'
+        ]
+      },
+      advantage: {
+        title: 'DebtPro OS',
+        items: [
+          'UI/UX optimized for high-volume recovery',
+          'Native Polaris data mapping engines',
+          'End-to-end legal workflow tracking',
+          'Automated notice generation templates'
+        ]
+      },
+      benefits: [
+        { title: 'Local Integration', desc: 'Seamlessly connects with CallPro and local banking cores.' },
+        { title: 'Full Compliance', desc: 'Strict adherence to Mongolian financial regulations.' },
+        { title: 'AI Driven', desc: 'Prioritize collections based on behavioral analytics.' }
+      ]
+    },
+    flow: {
+      tag: 'SYSTEM FLOW',
+      title: 'From Data to Results',
+      subtitle: 'How DebtPro automates every step of the loan recovery process.',
+      steps: [
+        {
+          id: 0,
+          label: 'Data Centralization',
+          path: 'Dashboard -> Import Data',
+          title: 'Centralize Information',
+          desc: 'Import data from Polaris via Excel in one click. System auto-categorizes loans (Normal, Caution, etc.).'
+        },
+        {
+          id: 1,
+          label: 'Smart Distribution',
+          path: 'Loan Management -> Auto-Allocation',
+          title: 'Intelligent Allocation',
+          desc: 'Automatically distribute loans based on agent workload and balance via advanced AI logic.'
+        },
+        {
+          id: 2,
+          label: 'Multi-Channel Action',
+          path: 'Collection Workspace -> Action Tracking',
+          title: 'Interaction Channels',
+          desc: 'Dial CallPro or send SMS directly from the app. Every action is tracked in a historical timeline.'
+        },
+        {
+          id: 3,
+          label: 'Legal Automation',
+          path: 'Legal Case -> Document Generator',
+          title: 'Document Automation',
+          desc: 'Auto-fill notices and court documents based on borrower data. Ready for instant printing.'
+        },
+        {
+          id: 4,
+          label: 'Insights & Reporting',
+          path: 'Reports -> Performance Dashboard',
+          title: 'Analytics & Insights',
+          desc: 'Monitor recovery rates, agent performance, and risk fund provisions through real-time charts.'
+        }
+      ]
     },
     workflow: {
       tag: 'COLLECTION PIPELINE',

@@ -4,7 +4,9 @@ import { Language } from './i18n';
 import { Navbar } from './Navbar';
 import { Hero } from './Hero';
 import { ComparisonSection } from './ComparisonSection';
+import { WhyDebtProSection } from './WhyDebtProSection';
 import { WorkflowSection } from './WorkflowSection';
+import { InteractiveFlowSection } from './InteractiveFlowSection';
 import { ShowcaseSection } from './ShowcaseSection';
 import { ContactSection } from './ContactSection';
 import { FAQSection } from './FAQSection';
@@ -53,7 +55,11 @@ const App: React.FC = () => {
 
         <ComparisonSection lang={lang} theme={theme} />
 
+        <WhyDebtProSection lang={lang} theme={theme} />
+
         <WorkflowSection lang={lang} theme={theme} />
+
+        <InteractiveFlowSection lang={lang} theme={theme} />
 
         <ShowcaseSection lang={lang} theme={theme} />
 
